@@ -77,4 +77,3 @@ Licensed under the APLv2.
 [volta-tomdale]: https://twitter.com/tomdale/status/1162017336699838467?s=20
 [gh-actions]: https://github.com/features/actions
 [travis]: https://travis-ci.org
-[repo-template-action]: https://github.com/jsynowiec/node-typescript-boilerplate/generate
