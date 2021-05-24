@@ -18,6 +18,46 @@
 
 This project is intended to be used with the latest Active LTS release of [Node.js][nodejs].
 
+Exemple :
+
+````typescript 
+window.onload = function (): void {
+	const resetEl = document.createElement("button");
+	resetEl.innerHTML = "Delete area";
+
+	const saveEl = document.createElement("button");
+	saveEl.innerHTML = "Save area";
+
+	const addEl = document.createElement("button");
+	addEl.innerHTML = "Add area";
+
+	const canvasEl = document.createElement("canvas");
+
+	const image = new Image();
+	image.src = "https://static.enlaps.io/media/packshot/connecte.png";
+
+	canvasEl.style.background = `url(${image.src})`;
+	canvasEl.style.backgroundSize = `contain`;
+
+	document.querySelectorAll(".inputs")[0].before(canvasEl);
+	document.querySelectorAll(".inputs")[0].before(saveEl);
+	document.querySelectorAll(".inputs")[0].before(resetEl);
+	document.querySelectorAll(".inputs")[0].before(addEl);
+
+	shapeEditor(
+		[
+			[157, 303, 241, 371, 272, 295],
+			[484, 71, 537, 199, 566, 115]
+		],
+		resetEl,
+		saveEl,
+		addEl,
+		canvasEl,
+		image
+	);
+}; 
+````
+
 ## License
 
 Licensed under the APLv2.
@@ -34,7 +74,7 @@ Licensed under the APLv2.
 [license-badge]: https://img.shields.io/badge/license-APLv2-blue.svg
 [license]: https://github.com/jsynowiec/node-typescript-boilerplate/blob/main/LICENSE
 [sponsor-badge]: https://img.shields.io/badge/♥-Sponsor-fc0fb5.svg
-[sponsor]: https://github.com/sponsors/jsynowiec
+[sponsor]: https://github.com/sponsors/wprod
 [jest]: https://facebook.github.io/jest/
 [eslint]: https://github.com/eslint/eslint
 [wiki-js-tests]: https://github.com/jsynowiec/node-typescript-boilerplate/wiki/Unit-tests-in-plain-JavaScript
